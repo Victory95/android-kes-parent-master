@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_beranda"
+            android:icon="@drawable/ic_home"
+            android:title="@string/beranda" />
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/ic_user2"
+            android:title="Profil Anda" />
+        <item
+            android:id="@+id/nav_pesan"
+            android:title="Pesan Orang Tua"
+            android:icon="@drawable/ic_mail_white"
+            />
+        <item
+            android:id="@+id/nav_tentang"
+            android:icon="@drawable/ic_about"
+            android:title="@string/tentang_kami" />
+        <item
+            android:id="@+id/nav_Pengaturan"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/pengaturan" />
+
+    </group>
+</menu>

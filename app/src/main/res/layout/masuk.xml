@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:id="@+id/lay_masuk"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Masuk"
+    tools:ignore="Autofill,RtlHardcoded,RtlSymmetry,ContentDescription" >
+
+    <ScrollView
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_email"
+                    android:textColorHint="@color/default_textHint"
+                    android:layout_width="match_parent"
+                    android:theme="@style/TextLabelView"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:theme="@style/TextLabel"
+                        android:id="@+id/et_email"
+                        android:hint="@string/hnt_email"
+                        android:textSize="16sp"
+                        android:inputType="textEmailAddress"
+                        android:background="@drawable/edt_bg_selector"
+                        android:paddingBottom="6dp"
+                        android:textColor="@color/default_textColor"
+                        android:paddingTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_marginTop="20dp"
+                    app:passwordToggleTint="@color/colorPrimary"
+                    android:textColorHint="@color/default_textHint"
+                    app:passwordToggleEnabled="true"
+                    android:theme="@style/TextLabelView"
+                    app:passwordToggleDrawable="@drawable/show_password_selector"
+                    android:id="@+id/til_kata_sandi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:theme="@style/TextLabel"
+                        android:id="@+id/et_kata_sandi"
+                        android:hint="@string/hnt_pass"
+                        android:textSize="16sp"
+                        android:inputType="textPassword"
+                        android:background="@drawable/edt_bg_selector"
+                        android:textColor="@color/default_textColor"
+                        android:paddingTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:id="@+id/tvb_lupa_pass"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/tv_lupa_kata_sandi"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btn_Masuk"
+                    android:text="@string/btn_masuk"
+                    android:textSize="17sp"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rectangle"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/tv_atau"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:background="@drawable/rectangle_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <com.google.android.gms.common.SignInButton
+                        android:id="@+id/sign_in_button"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_google_original"
+                        android:layout_width="18dp"
+                        android:layout_height="match_parent" />
+                    <Button
+                        android:id="@+id/btn_Google"
+                        android:text="@string/btn_google"
+                        android:textAllCaps="false"
+                        android:textColor="#6b6b6b"
+                        android:background="@android:color/transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/rectangle_line"
+                    android:backgroundTint="#3b5998"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/login_button"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"/>
+
+                    <ImageView
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/ic_facebook_original"
+                        android:layout_width="18dp"
+                        android:layout_height="match_parent" />
+                    <Button
+                        android:id="@+id/btn_Facebook"
+                        android:textAllCaps="false"
+                        android:text="@string/btn_facebook"
+                        android:paddingLeft="10dp"
+                        android:textColor="@android:color/white"
+                        android:background="@android:color/transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_weight="10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/default_background"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="@string/tv_recommend_daftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/colorPrimary"
+                android:gravity="left"
+                android:id="@+id/tvb_daftar"
+                android:layout_weight="1"
+                android:text="@string/btn_recommend_daftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

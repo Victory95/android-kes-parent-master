@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:id="@+id/fragPekerjaan"
+    tools:context=".Activity.Fragment.PekerjaanFragment"
+    tools:ignore="SmallSp,Autofill,RtlSymmetry,ContentDescription,RtlHardcoded">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll_view"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:text="@string/tv_pekerjaan"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="25sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rectangle_line2"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/tv_info_pekerjaan"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp">
+
+                <com.rey.material.widget.Spinner
+                    style="@style/Material.Widget.Spinner"
+                    android:id="@+id/sp_pekerjaan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"
+                    android:spinnerMode="dropdown"
+                    app:spn_dividerHeight="1dp"
+                    app:rd_style="@style/Material.Drawable.Ripple.Wave"
+                    app:spn_arrowAnimClockwise="true"
+                    app:spn_dividerColor="@color/ic_logo_background"
+                    app:spn_arrowSwitchMode="true"
+                    app:spn_arrowAnimDuration="500"
+                    app:spn_arrowColor="@color/ic_logo_background"/>
+            </LinearLayout>
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/til_pendidikan"
+                android:textColor="@color/red_300"
+                android:text="@string/validate_pendidikan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_nama_perusahaan"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:theme="@style/TextLabel"
+                    android:id="@+id/et_nama_perusahaan"
+                    android:hint="@string/et_nama_perusahaan"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edt_bg_selector_white"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_jabatan"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:theme="@style/TextLabel"
+                    android:id="@+id/et_jabatan"
+                    android:hint="@string/et_jabatan"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edt_bg_selector_white"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+                <com.rey.material.widget.Spinner
+                    style="@style/Material.Widget.Spinner"
+                    android:id="@+id/sp_penghasilan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"
+                    android:spinnerMode="dropdown"
+                    app:rd_style="@style/Material.Drawable.Ripple.Wave"
+                    app:spn_arrowAnimClockwise="true"
+                    app:spn_dividerColor="@color/ic_logo_background"
+                    app:spn_arrowSwitchMode="true"
+                    app:spn_dividerHeight="1dp"
+                    app:spn_arrowAnimDuration="500"
+                    app:spn_arrowColor="@color/ic_logo_background"/>
+            </LinearLayout>
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/til_penghasilan"
+                android:textColor="@color/red_300"
+                android:text="@string/validate_penghasilan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/maps"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/nama_kerja"
+                    android:text="@string/btn_lokasi_tempat_kerja"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_arrow"
+                    android:id="@+id/arrow"/>
+            </LinearLayout>
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/til_alamat_kerja"
+                android:textColor="@color/red_300"
+                android:text="@string/validate_alamat_kerja"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginBottom="50dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="12dp">
+
+                <fragment
+                    android:id="@+id/mapKerja"
+                    android:name="com.fingertech.kes.Activity.CustomView.MySupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/ic_logo_background"
+                    android:paddingLeft="5dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hint="@string/info_lokasi_kerja"
+                    android:id="@+id/alamat_kerja" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+   </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="#0046bfee"
+            android:text="@string/btn_kembali"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/viewPagerIndicators"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/indicators"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_berikut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="#0046bfee"
+            android:text="@string/btn_submit"
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</RelativeLayout>

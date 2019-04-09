@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_beranda"
+            android:icon="@drawable/ic_home"
+            android:title="Beranda" />
+        <item
+            android:id="@+id/nav_registrasi"
+            android:icon="@drawable/ic_form"
+            android:title="Registrasi" />
+        <item
+            android:id="@+id/nav_masuk"
+            android:icon="@drawable/ic_exit"
+            android:title="Masuk" />
+        <item
+            android:id="@+id/nav_tentang"
+            android:icon="@drawable/ic_about"
+            android:title="@string/tentang_kami" />
+        <item
+            android:id="@+id/nav_Pengaturan"
+            android:icon="@drawable/ic_settings"
+            android:title="Pengaturan" />
+    </group>
+</menu>

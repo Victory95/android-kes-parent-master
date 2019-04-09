@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="20dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/clicked"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/star"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_circle_blue"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:elevation="10dp"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.github.florent37.shapeofview.shapes.CircleView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:elevation="4dp"
+            android:layout_gravity="center"
+            app:shape_circle_borderColor="@color/colorPrimary"
+            app:shape_circle_borderWidth="0.5dp"
+            android:id="@+id/profilanak">
+
+            <ImageView
+                xmlns:app="http://schemas.android.com/apk/lib/com.app.chasebank"
+                android:id="@+id/image_anak"
+                android:scaleType="centerCrop"
+                app:border_color="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+
+        </com.github.florent37.shapeofview.shapes.CircleView>
+
+        <LinearLayout
+            android:id="@+id/namaanak"
+            android:layout_width="80dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nama_anak"
+                android:text="@string/tv_profile_anak"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:gravity="center"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

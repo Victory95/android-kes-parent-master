@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Maps.SearchingMAP"
+    tools:ignore="ContentDescription,RtlSymmetry">
+
+    <FrameLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_satu"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay"/>
+
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/searchviewstyle"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loc"
+        android:layout_below="@id/toolbar_container"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_maps" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_lokasi_anda"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loc"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/kelurahan"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/edt_bg_selector_black"
+                android:text="@string/tv_titik"
+                android:paddingTop="5dp"
+                android:paddingStart="2dp"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9">
+
+            <ImageView
+                android:id="@+id/book"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:background="@drawable/ic_bookmark" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_below="@id/searchh"-->
+        <!--android:id="@+id/search_school"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginTop="10dp">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/ic_controls_blue"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:foreground="?android:attr/selectableItemBackground"-->
+                <!--android:clickable="true"-->
+                <!--android:focusable="true" />-->
+
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchh"
+        android:orientation="vertical">
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/mapSearch"
+            android:layout_marginTop="10dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+        <com.fingertech.kes.Activity.Model.SquareFloatButton
+            android:id="@+id/iv_filter"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:background="@drawable/ripple"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_controls_blue" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/grey_100">
+
+        <RelativeLayout
+            android:id="@+id/tick_mark_labels_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"/>
+
+            <com.etiennelawlor.discreteslider.library.ui.DiscreteSlider
+                android:id="@+id/discrete_slider"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@color/grey_100"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                app:backdropFillColor="@color/grey_200"
+                app:backdropStrokeColor="@color/grey_300"
+                app:backdropStrokeWidth="1dp"
+                app:horizontalBarThickness="5dp"
+                app:position="0"
+                app:progressDrawable="@drawable/transparent_progress_drawable"
+                app:thumb="@drawable/thumb"
+                app:tickMarkCount="4"
+                app:tickMarkRadius="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

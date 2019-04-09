@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/fragTempatTinggal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    tools:context=".Activity.Fragment.TempatTinggalFragment"
+    tools:ignore="Autofill,ContentDescription,RtlHardcoded">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scroll_view"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/tv_tempat_tinggal"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_Alamat"
+            android:textColorHint="#B6FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:theme="@style/TextLabelWhite"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp">
+
+            <EditText
+                android:theme="@style/TextLabel"
+                android:id="@+id/et_Alamat"
+                android:hint="@string/tv_alamat"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edt_bg_selector_white"
+                android:paddingBottom="6dp"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_weight="1"
+                    android:id="@+id/til_rt"
+                    android:layout_marginEnd="5dp"
+                    android:textColorHint="#B6FFFFFF"
+                    android:theme="@style/TextLabelWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:theme="@style/TextLabel"
+                        android:id="@+id/et_rt"
+                        android:hint="@string/et_rt"
+                        android:textSize="16sp"
+                        android:inputType="textEmailAddress"
+                        android:background="@drawable/edt_bg_selector_white"
+                        android:paddingBottom="6dp"
+                        android:textColor="@android:color/white"
+                        android:paddingTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_rw"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:textColorHint="#B6FFFFFF"
+                    android:theme="@style/TextLabelWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:theme="@style/TextLabel"
+                        android:id="@+id/et_rw"
+                        android:hint="@string/et_rw"
+                        android:textSize="16sp"
+                        android:inputType="textEmailAddress"
+                        android:background="@drawable/edt_bg_selector_white"
+                        android:paddingBottom="6dp"
+                        android:textColor="@android:color/white"
+                        android:paddingTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_dusun"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:theme="@style/TextLabel"
+                    android:id="@+id/et_dusun"
+                    android:hint="@string/tv_desa"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edt_bg_selector_white"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_kelurahan"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginLeft="30dp">
+
+            <EditText
+                android:theme="@style/TextLabel"
+                android:id="@+id/et_kelurahan"
+                android:hint="@string/tv_kelurahan"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edt_bg_selector_white"
+                android:paddingBottom="6dp"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_Kecamatan"
+            android:textColorHint="#B6FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:theme="@style/TextLabelWhite"
+
+            android:layout_marginLeft="30dp">
+
+            <EditText
+                android:theme="@style/TextLabel"
+                android:id="@+id/et_Kecamatan"
+                android:hint="@string/tv_kecamatan"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edt_bg_selector_white"
+                android:paddingBottom="6dp"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_kode_pos"
+            android:textColorHint="#B6FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:theme="@style/TextLabelWhite"
+            android:layout_marginLeft="30dp">
+
+            <EditText
+                android:theme="@style/TextLabel"
+                android:id="@+id/et_kode_pos"
+                android:hint="@string/tv_kode_pos"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edt_bg_selector_white"
+                android:paddingBottom="6dp"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_status_tinggal"
+            android:textColorHint="#B6FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:theme="@style/TextLabelWhite"
+            android:layout_marginLeft="30dp">
+
+            <EditText
+                android:theme="@style/TextLabel"
+                android:id="@+id/et_status_tinggal"
+                android:hint="@string/tv_status_tinggal"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edt_bg_selector_white"
+                android:paddingBottom="6dp"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_transportasi"
+            android:textColorHint="#B6FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:theme="@style/TextLabelWhite"
+            android:layout_marginLeft="30dp">
+
+            <EditText
+                android:theme="@style/TextLabel"
+                android:id="@+id/et_transportasi"
+                android:hint="@string/tv_transportasi"
+                android:textSize="16sp"
+                android:inputType="textEmailAddress"
+                android:background="@drawable/edt_bg_selector_white"
+                android:paddingBottom="6dp"
+                android:textColor="@android:color/white"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/maps"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:textColor="@android:color/white"
+                android:id="@+id/nama_rumah"
+                android:text="@string/tv_lokasi_rumah"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_arrow"
+                android:id="@+id/arrom"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="12dp">
+
+            <fragment
+                android:id="@+id/mapTinggal"
+                android:name="com.fingertech.kes.Activity.CustomView.MySupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_line"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/alamat_rumah_anak"
+                android:hint="@string/tv_info_lokasi_rumah"
+                android:gravity="center"/>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_kembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="#0046bfee"
+            android:text="@string/btn_kembali"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/viewPagerIndicators"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/indicators"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_berikut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="#0046bfee"
+            android:text="@string/btn_submit"
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:id="@+id/fragKontakAnak"
+    tools:context=".Activity.Fragment.KontakAnakFragment"
+    tools:ignore="Autofill">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/tv_kontak"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="28sp" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_nomor_Rumah"
+                android:layout_marginTop="20dp"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:theme="@style/TextLabel"
+                    android:id="@+id/et_nomor_Rumah"
+                    android:hint="@string/tv_no_rumah"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edt_bg_selector_white"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_nomor_Ponsel"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:theme="@style/TextLabel"
+                    android:id="@+id/et_nomor_Ponsel"
+                    android:hint="@string/tv_no_handphone"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edt_bg_selector_white"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_e_mail"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:theme="@style/TextLabel"
+                    android:id="@+id/et_email_student"
+                    android:hint="@string/et_email"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edt_bg_selector_white"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_skun"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:theme="@style/TextLabel"
+                    android:id="@+id/et_skun"
+                    android:hint="@string/tv_skun"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edt_bg_selector_white"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Penerimaan kps"
+                    android:textColor="@color/ic_logo_background"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:id="@+id/kps_hint"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:text="Apa itu kps?"
+                    android:textColor="#FF0000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
+
+                <com.rey.material.widget.Spinner
+                    style="@style/Material.Widget.Spinner"
+                    android:id="@+id/sp_kps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@android:color/transparent"
+                    android:spinnerMode="dropdown"
+                    app:rd_style="@style/Material.Drawable.Ripple.Wave"
+                    app:spn_arrowAnimClockwise="true"
+                    app:spn_dividerColor="@color/ic_logo_background"
+                    app:spn_dividerHeight="1dp"
+                    app:spn_arrowSwitchMode="true"
+                    app:spn_arrowAnimDuration="300"
+                    app:spn_arrowColor="@color/ic_logo_background"/>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_kps"
+                android:textColorHint="#B6FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:theme="@style/TextLabelWhite"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="30dp">
+
+                <EditText
+                    android:theme="@style/TextLabel"
+                    android:id="@+id/et_kps"
+                    android:hint="@string/tv_no_kps"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:background="@drawable/edt_bg_selector_white"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:background="#0046bfee"
+            android:text="@string/btn_kembali"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/viewPagerIndicators"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/indicators"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="#0046bfee"
+            android:text="@string/btn_berikutnya"
+            android:textAlignment="textEnd"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</RelativeLayout>
